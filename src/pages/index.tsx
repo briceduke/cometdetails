@@ -48,6 +48,7 @@ export function ContactUs() {
             <TextInput error={errors.name?.message ?? ''} {...register('name')} label="Your name (first or full, doesn't matter)" required />
             <TextInput error={errors.email?.message ?? ''} {...register('email')} type='email' label="Your email" />
             <TextInput error={errors.phone?.message ?? ''} {...register('phone')} label="Your phone" />
+            <TextInput display={'none'} label="Your last name" {...register('lastName')} />
 
             <Group position="apart" mt="lg" >
               <Button type='submit' loading={loading} color='brand.0'>Notify Me!</Button>

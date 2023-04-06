@@ -10,5 +10,6 @@ export const interestSchema = z.object({
     .refine(validator.isMobilePhone, "Invalid phone")
     .or(z.string().length(0))
     .optional(),
+  lastName: z.string().length(0),
 });
 export type interestInput = ReturnType<typeof interestSchema.parse>;
